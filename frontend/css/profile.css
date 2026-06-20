@@ -1,0 +1,110 @@
+.profile-head {
+    margin-bottom: 25px
+}
+
+.profile-head h1 {
+    font-weight: 800;
+    color: var(--navy);
+    font-size: 2rem;
+    margin: 0
+}
+
+.profile-head p {
+    color: #6b7d8f;
+    margin: 7px 0
+}
+
+.profile-card,
+.history-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px #244d7511
+}
+
+.avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #eaf3ff;
+    color: var(--primary);
+    font-size: 1.9rem;
+    margin-bottom: 15px
+}
+
+.profile-card h2 {
+    font-size: 1.2rem;
+    font-weight: 800
+}
+
+.profile-card>p {
+    font-size: .9rem;
+    color: #6d7d8e
+}
+
+.profile-line {
+    display: flex;
+    gap: 11px;
+    padding: 13px 0;
+    border-top: 1px solid #eef2f5;
+    font-size: .9rem
+}
+
+.profile-line i {
+    color: var(--primary);
+    width: 16px;
+    margin-top: 3px
+}
+
+.profile-line span {
+    display: block;
+    color: #7a8997;
+    font-size: .78rem
+}
+
+.history-card h3 {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 20px
+}
+
+.table {
+    margin: 0
+}
+
+.table th {
+    font-size: .77rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    color: #768696;
+    border-width: 0 0 1px
+}
+
+.table td {
+    font-size: .88rem;
+    color: #455b70;
+    padding: 14px 8px
+}
+
+.table tbody tr:last-child td {
+    border: 0
+}
+
+.badge-status {
+    background: #e6f8ed;
+    color: #168443;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: .73rem
+}
+
+.badge-done {
+    background: #e9f2ff;
+    color: #1265cc;
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: .73rem
+}

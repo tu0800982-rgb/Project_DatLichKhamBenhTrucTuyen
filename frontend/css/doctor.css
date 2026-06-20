@@ -1,0 +1,160 @@
+.search-panel {
+    display: grid;
+    grid-template-columns: 1fr 230px;
+    gap: 15px;
+    background: #fff;
+    padding: 17px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px #244d7515;
+    margin-top: -105px;
+    position: relative
+}
+
+.search-panel .form-control,
+.search-panel .form-select,
+.search-panel .input-group-text {
+    height: 48px;
+    border-color: #e0e8f0
+}
+
+.search-panel .input-group-text {
+    background: #f8fbff;
+    color: var(--primary)
+}
+
+.result-count {
+    font-size: .92rem;
+    color: #6c7d8e;
+    margin: 27px 0 18px
+}
+
+.doctor-card .doctor-specialty {
+    color: var(--primary);
+    font-weight: 650
+}
+
+.doctor-card .doctor-experience {
+    display: flex;
+    gap: 5px;
+    align-items: center
+}
+
+.detail-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 5px 20px #244d7512
+}
+
+.detail-hero {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    border-bottom: 1px solid #e9eef3;
+    padding-bottom: 28px;
+    margin-bottom: 28px
+}
+
+.detail-hero img {
+    width: 170px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 14px
+}
+
+.detail-hero h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--navy)
+}
+
+.detail-specialty {
+    color: var(--primary);
+    font-weight: 700
+}
+
+.info-chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 17px
+}
+
+.info-chips span {
+    background: #f0f6ff;
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: .84rem;
+    color: #526b84
+}
+
+.detail-card h3 {
+    font-size: 1.15rem;
+    font-weight: 750;
+    color: var(--navy);
+    margin: 25px 0 12px
+}
+
+.detail-card p {
+    line-height: 1.75;
+    color: #637386
+}
+
+.schedule-days {
+    display: flex;
+    gap: 9px;
+    flex-wrap: wrap
+}
+
+.day-pill {
+    padding: 10px 13px;
+    border: 1px solid #dce7f4;
+    border-radius: 8px;
+    background: #fbfdff;
+    color: #526b84;
+    font-size: .88rem
+}
+
+.time-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.time-list span {
+    padding: 9px 18px;
+    background: #eaf3ff;
+    color: var(--primary);
+    font-weight: 650;
+    border-radius: 7px
+}
+
+.detail-side {
+    position: sticky;
+    top: 90px
+}
+
+@media(max-width:767px) {
+    .search-panel {
+        grid-template-columns: 1fr;
+        margin-top: -90px
+    }
+
+    .detail-hero {
+        align-items: flex-start;
+        gap: 18px
+    }
+
+    .detail-hero img {
+        width: 105px;
+        height: 130px
+    }
+
+    .detail-hero h1 {
+        font-size: 1.3rem
+    }
+
+    .detail-card {
+        padding: 20px
+    }
+}

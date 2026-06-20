@@ -1,0 +1,414 @@
+:root {
+    --primary: #0d6efd;
+    --navy: #12355b;
+    --soft: #f4f8fc;
+    --text: #23364a
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text);
+    background: #fff
+}
+
+a {
+    text-decoration: none
+}
+
+.navbar {
+    padding: 15px 0;
+    background: #fff
+}
+
+.brand {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--navy)
+}
+
+.brand i {
+    color: var(--primary);
+    margin-right: 7px
+}
+
+.brand span {
+    color: var(--primary)
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #425466 !important;
+    margin: 0 5px
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important
+}
+
+.btn {
+    border-radius: 9px;
+    font-weight: 600
+}
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 6px 16px #0d6efd2e
+}
+
+.section-padding {
+    padding: 78px 0
+}
+
+.bg-soft {
+    background: var(--soft)
+}
+
+.hero-section {
+    padding: 70px 0 85px;
+    background: linear-gradient(120deg, #f5faff 0%, #edf5ff 100%);
+    overflow: hidden
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--primary);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin-bottom: 10px
+}
+
+.hero-copy h1 {
+    font-size: clamp(2.45rem, 5vw, 4.2rem);
+    font-weight: 800;
+    line-height: 1.12;
+    color: var(--navy);
+    max-width: 650px
+}
+
+.hero-copy h1 span {
+    color: var(--primary)
+}
+
+.hero-copy>p {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: #5d7185;
+    max-width: 570px;
+    margin: 22px 0 30px
+}
+
+.hero-image {
+    position: relative
+}
+
+.hero-image img {
+    width: 100%;
+    height: 455px;
+    object-fit: cover;
+    border-radius: 28px;
+    box-shadow: 18px 20px 0 #dbeafe
+}
+
+.floating-card {
+    position: absolute;
+    bottom: 28px;
+    left: -35px;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 13px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 12px 35px #244d7530
+}
+
+.floating-card i {
+    font-size: 2rem;
+    color: #16a34a
+}
+
+.floating-card small {
+    display: block;
+    color: #718096
+}
+
+.hero-metrics {
+    display: flex;
+    gap: 32px;
+    margin-top: 45px
+}
+
+.hero-metrics div {
+    display: flex;
+    flex-direction: column
+}
+
+.hero-metrics strong {
+    color: var(--primary);
+    font-size: 1.4rem
+}
+
+.hero-metrics span {
+    font-size: .82rem;
+    color: #6b7d90
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    font-weight: 750;
+    color: var(--navy);
+    margin: 0
+}
+
+.text-link {
+    font-weight: 650;
+    color: var(--primary)
+}
+
+.specialty-card,
+.doctor-card {
+    height: 100%;
+    background: #fff;
+    border: 1px solid #edf1f5;
+    border-radius: 15px;
+    padding: 25px;
+    transition: .25s ease;
+    box-shadow: 0 4px 14px #253b5110
+}
+
+.specialty-card:hover,
+.doctor-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 13px 28px #25476b1b;
+    border-color: #cfe1ff
+}
+
+.specialty-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: #eaf3ff;
+    color: var(--primary);
+    font-size: 1.35rem;
+    margin-bottom: 18px
+}
+
+.specialty-card h3 {
+    font-size: 1.08rem;
+    font-weight: 700
+}
+
+.specialty-card p {
+    font-size: .9rem;
+    color: #687a8c;
+    margin: 0
+}
+
+.doctor-card {
+    padding: 0;
+    overflow: hidden
+}
+
+.doctor-card img {
+    height: 205px;
+    width: 100%;
+    object-fit: cover
+}
+
+.doctor-card .card-content {
+    padding: 19px
+}
+
+.doctor-card h3 {
+    font-size: 1.05rem;
+    font-weight: 750;
+    margin: 0 0 5px
+}
+
+.doctor-card p {
+    font-size: .87rem;
+    margin-bottom: 9px;
+    color: #64768a
+}
+
+.doctor-meta {
+    font-size: .82rem;
+    color: #536b82;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px
+}
+
+.rating {
+    color: #f59e0b
+}
+
+.cta-banner {
+    border-radius: 21px;
+    background: linear-gradient(120deg, #0965e5, #0d6efd 55%, #42a5ff);
+    padding: 43px 48px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px
+}
+
+.cta-banner h2 {
+    font-weight: 750;
+    margin: 0 0 8px
+}
+
+.cta-banner p {
+    margin: 0;
+    opacity: .86
+}
+
+.footer {
+    background: #102d4b;
+    color: #c8d4e0;
+    padding: 55px 0 20px
+}
+
+.footer h5 {
+    color: #fff;
+    font-weight: 700
+}
+
+.footer p,
+.footer li {
+    font-size: .9rem;
+    line-height: 1.9
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0
+}
+
+.footer a {
+    color: #c8d4e0
+}
+
+.footer-bottom {
+    border-top: 1px solid #ffffff20;
+    margin-top: 25px;
+    padding-top: 20px;
+    font-size: .85rem
+}
+
+.page-header {
+    padding: 64px 0;
+    background: linear-gradient(110deg, #e7f1ff, #f6fbff)
+}
+
+.page-header h1 {
+    color: var(--navy);
+    font-weight: 800
+}
+
+.page-header p {
+    color: #64768a;
+    margin: 0
+}
+
+.fade-in {
+    animation: fadeIn .5s ease both
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px)
+    }
+
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+@media(max-width:991px) {
+    .hero-section {
+        padding-top: 45px
+    }
+
+    .hero-image {
+        max-width: 600px;
+        margin: auto
+    }
+
+    .hero-image img {
+        height: 390px
+    }
+
+    .floating-card {
+        left: 15px
+    }
+
+    .section-padding {
+        padding: 55px 0
+    }
+}
+
+@media(max-width:575px) {
+    .hero-copy h1 {
+        font-size: 2.35rem
+    }
+
+    .hero-metrics {
+        gap: 16px
+    }
+
+    .hero-metrics strong {
+        font-size: 1.15rem
+    }
+
+    .hero-image img {
+        height: 300px
+    }
+
+    .floating-card {
+        padding: 11px;
+        bottom: 13px
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        gap: 15px
+    }
+
+    .section-heading h2 {
+        font-size: 1.65rem
+    }
+
+    .cta-banner {
+        padding: 30px;
+        display: block
+    }
+
+    .cta-banner .btn {
+        margin-top: 20px
+    }
+
+    .navbar .btn {
+        margin-top: 8px
+    }
+}
