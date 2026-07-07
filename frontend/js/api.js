@@ -1,4 +1,4 @@
-const API_BASE = window.MEDBOOKING_API_BASE || 'http://localhost:3000/api';
+const API_BASE = window.MEDBOOKING_API_BASE || `${window.location.origin}/api`;
 
 const API = {
   async request(path, options = {}) {
