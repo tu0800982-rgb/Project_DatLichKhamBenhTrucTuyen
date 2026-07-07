@@ -227,9 +227,12 @@ a {
 }
 
 .doctor-card img {
-    height: 205px;
+    aspect-ratio: 4 / 3;
+    height: auto;
     width: 100%;
-    object-fit: cover
+    object-fit: cover;
+    object-position: center top;
+    display: block
 }
 
 .doctor-card .card-content {
