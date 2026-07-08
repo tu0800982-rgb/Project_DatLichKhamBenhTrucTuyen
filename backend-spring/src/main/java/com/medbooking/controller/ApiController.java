@@ -147,6 +147,20 @@ public class ApiController {
         }
     }
 
+    @PostMapping("/appointments/{id}/cancel")
+    public ResponseEntity<?> cancelAppointment(
+            @RequestHeader(value = "Authorization", required = false) String authorization,
+            @PathVariable long id
+    ) {
+        long userId = jwtService.requireUserId(authorization);
+        boolean cancelled = repository.cancelAppointment(id, userId);
+        if (!cancelled) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body(Map.of("message", "Không tìm thấy lịch hẹn hợp lệ để hủy."));
+        }
+        return ResponseEntity.ok(Map.of("message", "Đã hủy lịch khám."));
+    }
+
     private boolean isBlank(String value) {
         return value == null || value.isBlank();
     }

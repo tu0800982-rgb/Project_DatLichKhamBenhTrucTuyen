@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
-    @ExceptionHandler({UnauthorizedException.class, JwtException.class, IllegalArgumentException.class})
+    @ExceptionHandler({UnauthorizedException.class, JwtException.class})
     public ResponseEntity<Map<String, String>> unauthorized() {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                 .body(Map.of("message", "Phiên đăng nhập không hợp lệ hoặc đã hết hạn."));

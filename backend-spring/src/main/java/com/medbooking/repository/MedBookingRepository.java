@@ -172,4 +172,13 @@ public class MedBookingRepository {
         }, keyHolder);
         return keyHolder.getKey().longValue();
     }
+
+    public boolean cancelAppointment(long appointmentId, long userId) {
+        int updated = jdbc.update(
+                "UPDATE appointments SET status = 'cancelled' WHERE id = ? AND user_id = ? AND status = 'confirmed'",
+                appointmentId,
+                userId
+        );
+        return updated > 0;
+    }
 }

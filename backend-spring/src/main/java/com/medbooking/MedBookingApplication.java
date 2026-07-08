@@ -9,3 +9,4 @@ public class MedBookingApplication {
         SpringApplication.run(MedBookingApplication.class, args);
     }
 }
+

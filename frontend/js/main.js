@@ -14,10 +14,22 @@ async function renderProfile() {
     const u = await API.get('/me');
     info.innerHTML = `<div class="avatar"><i class="fa-solid fa-user"></i></div><h2>${u.name}</h2><p>Bệnh nhân MedBooking</p><div class="profile-line"><i class="fa-regular fa-envelope"></i><div><span>Email</span>${u.email}</div></div><div class="profile-line"><i class="fa-solid fa-phone"></i><div><span>Số điện thoại</span>${u.phone}</div></div>`;
     const apps = await API.get('/appointments');
-    const rows = apps.map(a => `<tr><td>${a.doctor_name}</td><td>${a.specialty}</td><td>${new Date(a.date).toLocaleDateString('vi-VN')}</td><td>${String(a.time).slice(0, 5)}</td><td><span class="badge-status">${a.status === 'confirmed' ? 'Đã xác nhận' : a.status}</span></td></tr>`).join('') || '<tr><td colspan="5">Chưa có lịch hẹn.</td></tr>';
+    const statusLabel = (status) => status === 'confirmed' ? 'Đã xác nhận' : status === 'completed' ? 'Đã khám' : status === 'cancelled' ? 'Đã hủy' : status;
+    const rows = apps.map(a => `<tr><td>${a.doctor_name}</td><td>${a.specialty}</td><td>${new Date(a.date).toLocaleDateString('vi-VN')}</td><td>${String(a.time).slice(0, 5)}</td><td><span class="badge-status badge-${a.status}">${statusLabel(a.status)}</span></td><td>${a.status === 'confirmed' ? `<button class="btn btn-sm btn-outline-danger" onclick="cancelAppointment(${a.id})">Hủy lịch</button>` : '<span class="text-muted small">-</span>'}</td></tr>`).join('') || '<tr><td colspan="6">Chưa có lịch hẹn.</td></tr>';
     document.querySelector('#upcoming-appointments').innerHTML = rows;
     document.querySelector('#past-appointments').innerHTML = '<tr><td colspan="3">Chưa có lịch sử khám.</td></tr>';
   } catch (error) { alert(error.message); }
+}
+
+async function cancelAppointment(id) {
+  if (!confirm('Bạn muốn hủy lịch hẹn này?')) return;
+  try {
+    await API.post(`/appointments/${id}/cancel`, {});
+    await renderProfile();
+    alert('Đã hủy lịch khám.');
+  } catch (error) {
+    alert(error.message);
+  }
 }
 document.addEventListener('DOMContentLoaded', async () => {
   const n = document.querySelector('#site-nav'), f = document.querySelector('#site-footer'); if (n) n.innerHTML = nav(); if (f) f.innerHTML = footer();

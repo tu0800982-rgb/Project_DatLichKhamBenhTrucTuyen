@@ -108,3 +108,8 @@
     border-radius: 20px;
     font-size: .73rem
 }
+
+.badge-cancelled {
+    background: #fdecec;
+    color: #c53030
+}
